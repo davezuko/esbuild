@@ -1935,6 +1935,7 @@ loop:
 	// If there is a potential ambiguity, all results must be the same
 	for _, ambiguousResult := range ambiguousResults {
 		if ambiguousResult != result {
+			fmt.Printf("Ambiguous results: %+v\n", ambiguousResults)
 			return matchImportResult{kind: matchImportAmbiguous}
 		}
 	}
